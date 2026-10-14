@@ -58,20 +58,108 @@ section h3 {
 }
 
 .activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-bottom: 16px;
+  padding: 18px;
+  border: 1px solid #e3e8f3;
+  border-left: 4px solid #3949ab;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+  box-shadow: 0 3px 10px rgba(26, 35, 126, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(26, 35, 126, 0.12);
 }
 
 .activity-card h4 {
-  margin-bottom: 10px;
-  color: #0066cc;
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 1.15rem;
 }
 
-.activity-card p {
-  margin-bottom: 8px;
+.activity-card .activity-description {
+  margin-bottom: 12px;
+  color: #4d5668;
+}
+
+.activity-card .activity-meta {
+  margin-bottom: 5px;
+  color: #394150;
+  font-size: 0.93rem;
+}
+
+.participants-section {
+  margin-top: 15px;
+  padding: 12px 14px;
+  border-radius: 7px;
+  background-color: #eef1fb;
+}
+
+.participants-section h5 {
+  margin-bottom: 7px;
+  color: #283593;
+  font-size: 0.95rem;
+}
+
+.participant-list {
+  padding: 0;
+  list-style: none;
+  color: #394150;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 0;
+  overflow-wrap: anywhere;
+}
+
+.participant-remove-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #b42318;
+}
+
+.participant-remove-button:hover {
+  background-color: #fee4e2;
+  color: #912018;
+}
+
+.participant-remove-button:focus-visible {
+  outline: 2px solid #3949ab;
+  outline-offset: 2px;
+}
+
+.participant-remove-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.participant-remove-button svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.empty-participants {
+  color: #687386;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .form-group {
